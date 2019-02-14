@@ -1,0 +1,114 @@
+.reset{
+	margin: 0;
+	padding: 0;
+}
+
+/*--Father--*/
+.icon-menu {
+	height: 100vh;
+	list-style-type: none;
+	/*background: #f7f7f7;*/
+	background: #f2f2f3;
+	max-width: 5.2em !important;
+	width: 5.2em;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+/*--Father--*/
+
+/*--Main Icons--*/
+.icon-menu li a.icon-link {
+	text-decoration: none;
+	display: block;
+	height: 5em;
+	width: 5.2em;
+	color: #7a7a7a;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	transition: background 0.1s ease-in-out;
+}
+
+.icon-menu li:first-child a.icon-link{ color:#fff; }
+
+.icon-menu li a.icon-link:hover,
+.icon-menu li:first-child{ 
+	background: #ff8432;
+	color: #fff;
+}
+
+/*--Main Icons--*/
+
+/*--Sub Icons--*/
+
+.p-menu{ font-size: 0.750em; }
+
+/*--Sub Icons--*/
+
+/*--Options--*/
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+  
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 12.500em;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{ 
+	display: block; 
+	left:83.5px;
+	top:-3.5px;
+}
+
+.dropdown:hover a.icon-link{ 
+	background: #ff8432;
+	color: #fff;
+}
+
+.sub-icon {
+	display: block;
+	text-decoration: none;
+	height: 2em;
+	margin-bottom: 0.5em;
+	width: 100%;
+	color: #7a7a7a;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	-webkit-transition: background 0.1s ease-in-out;
+	-moz-transition: background 0.1s ease-in-out;
+	transition: background 0.1s ease-in-out;
+}
+
+.sub-icon:hover{ 
+	text-decoration: none; 
+	background: #ff8432;
+	color: #fff;
+}
+
+.subicon-text{ padding: 0.5em; }
+
+/*--Options--*/
+  
+  
+
+
+/*.icon_blue{ background: #1e2fb6; }
+
+.icon_red:hover{ background: #f04c50; }
+
+.icon_yellow:hover{ background: #fcdd27; }
+
+.icon_green:hover{ background: #89c53e; }
+
+.logo-menu{
+	font-size: 3.250em;
+	font-style: italic;
+}
+*/

@@ -1,0 +1,13 @@
+.header{ 
+    overflow: hidden;
+    height: 5.0em; 
+    max-height: 5.0em; 
+    background: #f7f7f7;
+}
+
+.bars{ 
+    color: #7a7a7a; 
+    cursor: pointer;
+}
+
+.bars:hover{ color:#ff8432; }
