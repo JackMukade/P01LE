@@ -9,59 +9,82 @@
     <link rel="stylesheet" href="../files/css/icon_menu.css" >
     <link rel="stylesheet" href="../files/css/header.css" >
     <link rel="stylesheet" href="../files/css/home.css" >
+    <link rel="stylesheet" href="../files/css/buttons.css" >
+    <link rel="stylesheet" href="../files/css/search.css" >
+    <link rel="stylesheet" href="../files/css/main.css" >
+    <link rel="stylesheet" href="../files/css/table.css" >
+    <link rel="stylesheet" href="../files/css/mobile_menu.css" >
     <script defer src="../files/open-source/fontawesome-5.7.1/js/all.js"></script>
     <title>Catalogo</title>
 </head>
-
-<!--<div class="btn-group dropright">
-<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropright
-</button>
-<div class="dropdown-menu">
-    Dropdown menu links
-</div>
-</div>-->
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid wrapper">
         <div class="row">
-            <ul class="col icon-menu reset" id="sidebar">
+            <div id="navMob" class="mobile-menu">
+                <a id="opnavMob1" href="#"><i class="fas fa-clipboard-list mr-2"></i>Catálogos</a>
+                <a id="opnavMob2" href="#"><i class="fas fa-calculator mr-2"></i>Operaciones</a>
+                <a id="opnavMob3" href="#"> <i class="fas fa-file-pdf  mr-2"></i>Reportes</a>
+            </div>
+            <div id="subNavMob1" class="mobile-menu mobileMenu-options">
+                <a class="mobileMenu-title"><i class="fas fa-clipboard-list mr-2"></i>Catálogos<div id="close1" class="float-right cursor-pointer"><i class="fas fa-times"></i></div></a>
+                <a href="#">Usuarios</a>
+                <a href="#">Perfiles</a>
+                <a href="#">Clientes</a>
+                <a href="#">Estaciones</a>
+                <a href="#">Centros de trabajo</a>
+                <a href="#">Medios de transporte</a>
+                <a href="#">Productos</a>
+                <a href="#">Turnos</a>
+                <a href="#">Unidades de medida</a>
+            </div>
+            <div id="subNavMob2" class="mobile-menu mobileMenu-options">
+                <a class="mobileMenu-title"><i class="fas fa-calculator mr-2"></i>Operaciones<div id="close2" class="float-right cursor-pointer"><i class="fas fa-times"></i></div></a>
+                <a href="#">Lista de precios</a>
+                <a href="#">Estatus de pedidos</a>
+                <a href="#">Pedidos por autorizar</a>
+                <a href="#">Pedidos por programar</a>
+                <a href="#">Remisiones por facturar</a>
+                <a href="#">Facturación</a>
+                <a href="#">Complementos de pago</a>
+                <a href="#">Parametros de sistema</a>
+            </div>
+            <ul class="col menu-icon reset" id="sidebar">
                 <li>
-                    <a href="#" class="icon-link d-flex flex-column justify-content-center align-items-center icon_le"> 
+                    <a href="#" class="icon-link d-flex flex-column justify-content-center align-items-center"> 
                         <img width="65" height="65" src="../files/images/icon.png" alt="">
                     </a>
                 </li>
-                <li class="btn-group dropdown">
-                    <a href="#" class="icon-link d-flex flex-column justify-content-center align-items-center icon_le">
+                <li class="dropdown">
+                    <a href="#" class="icon-link d-flex flex-column justify-content-center align-items-center">
                         <i class="fas fa-clipboard-list fa-2x"></i>
                         <p class = "p-menu reset mt-1">Catálogos</p>
                     </a>
                     <div class="dropdown-content">
-                        <a class="sub-icon" href="#"><p class="subicon-text">Usuarios</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Perfiles</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Clientes</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Estaciones</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Centros de trabajo</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Medios de transporte</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Productos</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Turnos</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Unidades</p></a>
-                        <a class="sub-icon mb-0" href="#"><p class="subicon-text">Medida</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Usuarios</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Perfiles</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Clientes</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Estaciones</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Centros de trabajo</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Medios de transporte</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Productos</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Turnos</p></a>
+                        <a class="dropdown-item mb-0" href="#"><p class="item-text">Unidades de medida</p></a>
                     </div>
                 </li>
-                <li class="btn-group dropdown">
-                    <a href="#" class="icon-link d-flex flex-column justify-content-center align-items-center icon_le">
+                <li class="dropdown">
+                    <a href="#" class="icon-link d-flex flex-column justify-content-center align-items-center">
                         <i class="fas fa-calculator fa-2x"></i>
                         <p class = "p-menu reset mt-1">Operaciones</p>
                     </a>
                     <div class="dropdown-content">
-                        <a class="sub-icon" href="#"><p class="subicon-text">Lista de precios</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Estatus de pedidos</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Pedidos por autorizar</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Pedidos por programar</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Remisiones por facturar</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Facturación</p></a>
-                        <a class="sub-icon" href="#"><p class="subicon-text">Complementos de pago</p></a>
-                        <a class="sub-icon mb-0" href="#"><p class="subicon-text">Parametros de sistema</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Lista de precios</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Estatus de pedidos</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Pedidos por autorizar</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Pedidos por programar</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Remisiones por facturar</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Facturación</p></a>
+                        <a class="dropdown-item" href="#"><p class="item-text">Complementos de pago</p></a>
+                        <a class="dropdown-item mb-0" href="#"><p class="item-text">Parametros de sistema</p></a>
                     </div>
                 </li>
                 <li>
@@ -75,19 +98,166 @@
             <main id="main" class="col mb-2">
                 <div class="row">
                     <div class="col-12 p-0 header d-flex align-items-center justify-content-between">
-                        <div class="left d-flex align-items-center">
-                            <!--<a id="bars" class="px-2 py-2"><img width="125" height="65" src="../files/images/logo_color.png" alt="latEnergy"></a>-->
-                            <a id="bars" class="px-2 py-2"><div class="bars"><i class="fas fa-bars fa-2x"></i></div></a>
-                            <h2 class="pl-2 title">Inicio</h2>
+                        <div class="left d-flex align-items-center justify-content-between">
+                            <a id="bars-desktop" class="bars-desktop px-2 py-2"><div class="bars"><i class="fas fa-bars fa-2x"></i></div></a>
+                            <a class="px-2 py-2 mobile-logo"><img width="125" height="65" src="../files/images/logo_color.png" alt="latEnergy"></a>
+                            <h2 class="pl-2 title-body">Catálogos</h2>
                         </div>
                         <div class="right d-flex align-items-center">
-                            <a href="#" class="d-flex flex-column justify-content-center align-items-center icon-header">
+                            <a href="#" class="d-flex flex-column justify-content-center align-items-center logout">
                                 <i class="fas fa-sign-out-alt fa-2x"></i>
-                                <p class = "p-menu reset mt-1">Salir</p>
+                                <p class="mt-1">Salir</p>
                             </a>
                         </div>
                     </div>
-                   
+                </div>
+                <div class="row">
+                   <div class="col-12 p-0 d-flex justify-content-center search-dropdown">
+                        <button id="searchHandle" class="btn-menu"><i class="fas fa-search mr-2"></i>Búsqueda</button>
+                        <button id="add"  class="btn-menu"><i class="fas fa-plus mr-2"></i>Agregar</button>
+                        <button id="edit" class="btn-menu"><i class="fas fa-edit mr-2"></i>Editar</button>
+                        <button id="del"  class="btn-menu"><i class="fas fa-times mr-2"></i>Eliminar</button>
+                        <div id="searchContainer" class="search-dropdown-content">
+                            <div class="row">   
+                                <div id="closeSearch" class="col-12 d-flex justify-content-end button-close cursor-pointer">
+                                    <i class="fas fa-times fa-1x"></i>
+                                </div>
+                                <div class="col-lg-6 form-group align-items-center mb-0">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
+                                            <select class="form-control select-custom" id="select_idClient">
+                                                <option value="1">Contiene</option>
+                                                <option value="2">Empieza con</option>
+                                                <option value="3">Termina con</option>
+                                                <option value="4">Igual a</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
+                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 form-group mb-0">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
+                                            <select class="form-control select-custom" id="select_idClient">
+                                                <option value="1">Contiene</option>
+                                                <option value="2">Empieza con</option>
+                                                <option value="3">Termina con</option>
+                                                <option value="4">Igual a</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
+                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 form-group mb-0">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
+                                            <select class="form-control select-custom" id="select_idClient">
+                                                <option value="1">Contiene</option>
+                                                <option value="2">Empieza con</option>
+                                                <option value="3">Termina con</option>
+                                                <option value="4">Igual a</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
+                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 form-group mb-0">
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
+                                            <select class="form-control select-custom" id="select_idClient">
+                                                <option value="1">Contiene</option>
+                                                <option value="2">Empieza con</option>
+                                                <option value="3">Termina con</option>
+                                                <option value="4">Igual a</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
+                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-1">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-12 col-md-3 d-flex justify-content-end">
+                                            <button id="" type="submit" class="btn-action btn-accept w-100"><i class="fas fa-search"></i> Buscar</button>
+                                        </div>
+                                    </div>      
+                                </div>     
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="row d-flex justify-content-center row-body">
+                    <div class="col-11 col-md-10">
+                        <h2 class="py-4 title">Lorem Ipsum</h2>
+                        <div class="table-responsive">
+                            <table id="table" class="table table-all table-sm">
+                                <thead class="table-head">
+                                    <tr>
+                                        <th>Id cliente</th>
+                                        <th>Nombre</th>
+                                        <th>Cantidad</th>
+                                        <th>Fecha</th>  
+                                        <th>Sistema</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-body">
+                                    <tr>
+                                        <td class="text-left">January</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                        <td class="text-left">January</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">February</td>
+                                        <td class="text-left">$ 10,000.00</td>
+                                        <td class="text-left">January</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">March</td>
+                                        <td class="text-left">$ 85,000.00</td>
+                                        <td class="text-left">January</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">April</td>
+                                        <td class="text-left">$ 56,000.00</td>
+                                        <td class="text-left">January</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">May</td>
+                                        <td class="text-left">$ 98,000.00</td>
+                                        <td class="text-left">January</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                        <td class="text-left">$ 50,000.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="logoFixed" class="logo-fixed">
+                    <img width="125" height="60" src="../files/images/logo_color.png" alt="latEnergy">
                 </div>
             </main>
         </div>
@@ -101,5 +271,7 @@
     <script type="text/javascript" src="../files/open-source/sweetalert/sweetalert2-v7.24.1.js"></script>
     <script type="text/javascript" src="../files/open-source/sweetalert/promise-polyfill.js"></script> 
     <script type="text/javascript" src="../files/js/menu.js"></script>
+    <script type="text/javascript" src="../files/js/search.js"></script>
+    <script type="text/javascript" src="../files/js/table.js"></script>
 </body>
 </html>

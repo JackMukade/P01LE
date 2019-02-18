@@ -1,0 +1,76 @@
+.title-body{ color: #7a7a7a; }
+
+.table-all{
+    border-radius: 0.188em;
+    border-collapse: collapse;
+    padding: 0.313em;
+    box-shadow: 0 0.313em 0.625em rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+.table-head tr th{
+    color:#fff;
+    background:#555555;
+    border-right: 0.063em solid #303030;
+    padding: 0.5em;
+    text-align: left;
+}
+  
+.table-head tr th:first-child { border-top-left-radius: 0.188em; }
+   
+.table-head tr th:last-child {
+    border-top-right-radius: 0.063em;
+    border-right: none;
+}
+
+.table-body tr {
+    border-top: 0.063em solid #C1C3D1;
+    border-bottom: 0.063em solid #C1C3D1;
+}
+
+.table-body tr td {
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+   
+.table-body tr:nth-child(odd) td { background: #f7f7f7; }
+
+.table-body tr:nth-child(even) td{ background: #fbfbfb; }
+
+.table-body tr:hover td{
+    background:#00c853;
+    color:#ffff;
+    cursor: pointer;
+    font-weight: 300;
+}
+      
+.is-selected td{
+    background:#00a042 !important;
+    color:#ffff;
+    cursor: pointer;
+    font-weight: 300;
+}
+   
+tr:last-child td:first-child {border-bottom-left-radius: 0.188em; }
+   
+tr:last-child td:last-child { border-bottom-right-radius: 0.188em; }
+   
+td {
+    background:#FFFFFF;
+    padding: 1.250em;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 1.125em;
+    text-shadow: -0.063em -0.063em 0.063em rgba(0, 0, 0, 0.1);
+    border-right: 0.063em solid #C1C3D1;
+}
+
+td:last-child { border-right: 0; }
+
+th.text-left { text-align: left; }
+
+/*https://codepen.io/alassetter/pen/cyrfB*/
+
+

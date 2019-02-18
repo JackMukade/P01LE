@@ -1,24 +1,25 @@
-.reset{
-	margin: 0;
-	padding: 0;
-}
+.cursor-pointer {cursor: pointer;}
 
 /*--Father--*/
-.icon-menu {
-	height: 100vh;
+
+.menu-icon {
+	min-height: 100vh;
 	list-style-type: none;
-	/*background: #f7f7f7;*/
 	background: #f2f2f3;
+	background: #f7f7f7;
 	max-width: 5.2em !important;
 	width: 5.2em;
 	-webkit-transition: all 0.1s ease-in-out;
 	-moz-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
+	margin: 0;
+	padding: 0;
 }
+
 /*--Father--*/
 
 /*--Main Icons--*/
-.icon-menu li a.icon-link {
+.menu-icon li .icon-link {
 	text-decoration: none;
 	display: block;
 	height: 5em;
@@ -30,10 +31,8 @@
 	transition: background 0.1s ease-in-out;
 }
 
-.icon-menu li:first-child a.icon-link{ color:#fff; }
-
-.icon-menu li a.icon-link:hover,
-.icon-menu li:first-child{ 
+.menu-icon li:first-child,
+.menu-icon li .icon-link:hover{ 
 	background: #ff8432;
 	color: #fff;
 }
@@ -42,7 +41,11 @@
 
 /*--Sub Icons--*/
 
-.p-menu{ font-size: 0.750em; }
+.p-menu{ 
+	font-size: 0.750em; 
+	margin: 0;
+	padding: 0;
+}
 
 /*--Sub Icons--*/
 
@@ -57,15 +60,15 @@
 	display: none;
 	position: absolute;
 	background-color: #f9f9f9;
-	min-width: 12.500em;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
+	min-width: 12.5em;
+	box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
+	z-index: 900;
 }
 
 .dropdown:hover .dropdown-content{ 
 	display: block; 
-	left:83.5px;
-	top:-3.5px;
+	left: 5.219em;
+	top: -0.219em;
 }
 
 .dropdown:hover a.icon-link{ 
@@ -73,11 +76,10 @@
 	color: #fff;
 }
 
-.sub-icon {
+.dropdown-item {
 	display: block;
 	text-decoration: none;
-	height: 2em;
-	margin-bottom: 0.5em;
+	padding: 0.5em;
 	width: 100%;
 	color: #7a7a7a;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -86,29 +88,15 @@
 	transition: background 0.1s ease-in-out;
 }
 
-.sub-icon:hover{ 
+.dropdown-item:hover{ 
 	text-decoration: none; 
 	background: #ff8432;
 	color: #fff;
 }
 
-.subicon-text{ padding: 0.5em; }
+.dropdown-item .item-text{ margin: 0;}
 
 /*--Options--*/
+
+@media only screen and (max-width: 768px) { .menu-icon { display: none; } }
   
-  
-
-
-/*.icon_blue{ background: #1e2fb6; }
-
-.icon_red:hover{ background: #f04c50; }
-
-.icon_yellow:hover{ background: #fcdd27; }
-
-.icon_green:hover{ background: #89c53e; }
-
-.logo-menu{
-	font-size: 3.250em;
-	font-style: italic;
-}
-*/

@@ -1,4 +1,4 @@
-.main{ height: calc(100vh -  5.0em); }
+.main{ max-height: calc(100% -  5.0em); }
 
 .home-jumbo{
     background: url(../images/home_jumbotron2.jpg) no-repeat center center; 
@@ -8,23 +8,6 @@
 .link-image{
     height: 100%;
     width: 100%;
-}
-
-.icon-header{
-	display: block;
-	height: 5em;
-	width: 5em;
-	-webkit-transition: background 0.1s ease-in-out;
-	-moz-transition: background 0.1s ease-in-out;
-    transition: background 0.1s ease-in-out;
-    background: #ff8432;
-    color: #fff;
-}
-
-.icon-header:hover{ 
-	background: #ff8432;
-    color: #fff;
-    text-decoration: none;
 }
 
 .title{

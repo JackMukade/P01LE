@@ -1,0 +1,38 @@
+.mobile-menu {
+	height: calc(100% - 5em);
+	margin-top: 5em;
+	width: 0;
+	position: fixed;
+	z-index: 900;
+	top: 0;
+	right: 0;
+	background-color: #f7f7f7;
+	overflow-x: hidden;
+	transition: 0.5s;
+	text-align:center;
+	overflow: hidden;
+}
+
+.mobileMenu-options{ z-index: 1000; }
+  
+.mobile-menu a {
+	padding: 0.5em 0.5em 0.5em 2em;
+	text-decoration: none;
+	font-size: 1.563em;
+	color: #7a7a7a;
+	display: block;
+	transition: 0.3s;
+}
+
+.mobile-menu a:hover{
+	text-decoration: none; 
+	background: #ff8432;
+	color: #fff;
+}
+
+@media only screen and (min-width: 768px) { .mobile-menu { display: none; }}
+
+.mobileMenu-title{
+	background: #ff8432;
+	color: #fff !important;
+}
