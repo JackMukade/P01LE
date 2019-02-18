@@ -1,19 +1,29 @@
 .title-body{ color: #7a7a7a; }
 
+.dataTables_wrapper{ color: #6d6d6d; }
+
 .table-all{
-    border-radius: 0.188em;
-    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    /*border-radius: 0.188em;
+    border-collapse: collapse;*/
     padding: 0.313em;
     box-shadow: 0 0.313em 0.625em rgba(0, 0, 0, 0.1);
     animation: float 5s infinite;
+    width: 98.45% !important;
+    width: 100% !important;
 }
+
+
+@media only screen and (max-width: 48em) { .table-all{ font-size: 0.85em; }}
 
 .table-head tr th{
     color:#fff;
     background:#555555;
     border-right: 0.063em solid #303030;
     padding: 0.5em;
+    padding: 0 !important;
     text-align: left;
+    font-size: 0.9em;
 }
   
 .table-head tr th:first-child { border-top-left-radius: 0.188em; }
@@ -56,14 +66,16 @@ tr:last-child td:first-child {border-bottom-left-radius: 0.188em; }
    
 tr:last-child td:last-child { border-bottom-right-radius: 0.188em; }
    
-td {
+.table-body tr td {
     background:#FFFFFF;
     padding: 1.250em;
+    padding: 0 !important;
     text-align: left;
     vertical-align: middle;
     font-weight: 300;
     font-size: 1.125em;
-    text-shadow: -0.063em -0.063em 0.063em rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    /*text-shadow: -0.063em -0.063em 0.063em rgba(0, 0, 0, 0.1);*/
     border-right: 0.063em solid #C1C3D1;
 }
 
@@ -71,6 +83,19 @@ td:last-child { border-right: 0; }
 
 th.text-left { text-align: left; }
 
+.dataTables_scrollHeadInner{ width: 100% !important; }
+
 /*https://codepen.io/alassetter/pen/cyrfB*/
 
 
+
+table.dataTable thead .sorting:before,  table.dataTable thead .sorting:after, 
+table.dataTable thead .sorting_asc:before,  table.dataTable thead .sorting_asc:after, 
+table.dataTable thead .sorting_desc:before,  table.dataTable thead .sorting_desc:after, 
+table.dataTable thead .sorting_asc_disabled:before,  table.dataTable thead .sorting_asc_disabled:after, 
+table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+    position: absolute;
+    bottom: 0.1em !important;
+    display: block;
+    opacity: 0.3;
+}

@@ -34,20 +34,11 @@
 
 @keyframes pulse{
 
-  0% {
-    background: #f7f7f7;
-    color: #ff8432;
-  }
+  0% { background: #949494; }
 
-  50% {
-    background: #ff8432;
-    color: #fbfbfb;
-  }
+  50% { background: #ff8432; }
 
-  100% {
-    background: #f7f7f7;
-    color: #ff8432;
-  }
+  100% { background: #949494; }
 
 }
 
@@ -77,6 +68,42 @@
 
 .btn-accept:hover{ background: #ff9c5a; }
 
-.button-close{ color: #d32f2f;}
+.btn-close:hover{ background: #d32f2f !important;}
 
 /*--Action Buttons--*/
+
+.btn-title {
+  display: inline-block;
+  border: none;
+  padding: 0.4em 0.9em;
+  margin: 0;
+  text-decoration: none;
+  background: #949494;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0.063em solid #fff;
+}
+
+.btn-title:hover{
+  background: #ff8432;
+  color: #fbfbfb;
+}
+
+.btn-responsive{ width: 33.33%; }
+
+@media only screen and (max-width: 48em) {.btn-responsive{ width: 33.33%; } }
+
+@media only screen and (max-width: 48em) {.btn-alone{ width: 100%; } }
+
+.btn-search{ 
+  padding: 0.2em 0.8em;
+  width: 24%;
+}
+
+@media only screen and (max-width: 48em) {.btn-search{ width: 50%; } }

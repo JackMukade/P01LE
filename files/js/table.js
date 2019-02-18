@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    const language = { "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json" }
+
     const $table = $('#table'), $edit = $('#edit'), $del = $('#del')
 
     $table.on('click', 'tbody tr', function (e) {
@@ -16,6 +18,22 @@ $( document ).ready(function() {
         );
 
     })
+
+    $table.hover(
+        function() {
+           $('#searchContainer').css('opacity', '0.4')
+        }, function() {
+            $('#searchContainer').css('opacity', '1')
+        }
+    )
+
+    $table.DataTable({
+        scrollY: '55vh',
+        scrollCollapse: true,
+        responsive: true,
+        language,
+        pageLength: 25
+    });
     
     $edit.hover(function(){ $edit.removeClass('btn-animated'); });
     $del.hover(function(){ $del.removeClass('btn-animated'); });

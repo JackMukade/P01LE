@@ -80,7 +80,7 @@ $( document ).ready(function() {
 
     })
  
-    //Option3
+    //Option2
     $opnavMob2.click(function(e){
 
         e.preventDefault();
