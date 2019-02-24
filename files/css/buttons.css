@@ -1,31 +1,25 @@
-/*https://css-tricks.com/overriding-default-button-styles/*/
-
 .btn-menu {
   display: inline-block;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.41em 1em; 
   margin: 0;
   text-decoration: none;
-  background: #f7f7f7;
-  color: #ff8432;
+  background: #949494;
+  color: #fff;
   font-family: sans-serif;
-  font-size: 1rem;
+  font-size: 0.8em;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out, transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 0.063em solid #ffb584;
+  border: 0.063em solid #fff;
 }
 
 .btn-menu:hover{
   background: #ff8432;
   color: #fbfbfb;
 }
-
-.btn-menu:active { transform: scale(0.99); }
-
-@media only screen and (max-width: 48em) { .btn-menu{ padding: 0.5rem 2rem; }}
 
 
 /*--Animation--*/
@@ -43,57 +37,18 @@
 }
 
 /*--Animation--*/
-  
+
 /* --Action Buttons--*/
 
-.btn-action {
-  display: inline-block;
-  border: none;
-  padding: 0.3em 1em;
-  margin: 0;
-  text-decoration: none;
-  color: #fbfbfb;
-  font-family: sans-serif;
-  font-size: 1em;
+.close-form{  
+  color: #d32f2f; 
   cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 0.063em solid #ffb584;
-  border-radius: 0.4em;
 }
 
-.btn-accept{ background: #ff8432; }
-
-.btn-accept:hover{ background: #ff9c5a; }
-
-.btn-close:hover{ background: #d32f2f !important;}
+.btn-action{ border-radius: 0.4em; }
 
 /*--Action Buttons--*/
 
-.btn-title {
-  display: inline-block;
-  border: none;
-  padding: 0.4em 0.9em;
-  margin: 0;
-  text-decoration: none;
-  background: #949494;
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 0.8em;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 0.063em solid #fff;
-}
-
-.btn-title:hover{
-  background: #ff8432;
-  color: #fbfbfb;
-}
 
 .btn-responsive{ width: 33.33%; }
 
@@ -103,7 +58,13 @@
 
 .btn-search{ 
   padding: 0.2em 0.8em;
-  width: 24%;
 }
 
 @media only screen and (max-width: 48em) {.btn-search{ width: 50%; } }
+
+
+.sub-search{
+  background: #ff8432;
+  color: #fbfbfb;
+}
+

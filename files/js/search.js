@@ -1,4 +1,4 @@
-let showForm = false;
+let showSearch = false;
 
 $(document).ready(function() {
 
@@ -6,17 +6,17 @@ $(document).ready(function() {
 
     $button.click(function() {
         
-        if(!showForm){
+        if(!showSearch){
 
             $(this).css({'background': '#ff8432', 'color': '#fbfbfb'})
             $container.css({'display': 'block'})
-            showForm = true;
+            showSearch = true;
 
         }else{
 
             $container.css({ 'display': 'none'});
             $(this).removeAttr("style");
-            showForm = false;
+            showSearch = false;
 
         }
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
     $close.click(function(){ 
         $container.css({ 'display': 'none'});
         $button.removeAttr("style");
-        showForm = false;
+        showSearch = false;
     });
 
 });
@@ -39,7 +39,7 @@ $(document).mouseup(function(e) {
      
         $container.css({ 'display': 'none'})
         $button.removeAttr("style");
-        showForm = false;
+        showSearch = false;
         
     }
 

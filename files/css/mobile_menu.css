@@ -18,11 +18,14 @@
 .mobile-menu a {
 	padding: 0.5em 0.5em 0.5em 2em;
 	text-decoration: none;
-	font-size: 1.563em;
+	font-size: 1em;
 	color: #7a7a7a;
 	display: block;
 	transition: 0.3s;
+	border-bottom: 0.063em solid rgba(0,0,0,0.1)
 }
+
+.mobile-title{ font-size: 1.563em !important; }
 
 .mobile-menu a:hover{
 	text-decoration: none; 
