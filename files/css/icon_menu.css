@@ -2,7 +2,7 @@
 
 /*--Father--*/
 
-.menu-icon {
+.icon-menu {
 	min-height: 100vh;
 	list-style-type: none;
 	background: #f2f2f3;
@@ -14,25 +14,26 @@
 	transition: all 0.1s ease-in-out;
 	margin: 0;
 	padding: 0;
+	border-right: 0.063em solid rgba(0,0,0,0.1);
 }
 
 /*--Father--*/
 
 /*--Main Icons--*/
-.menu-icon li .icon-link {
+.icon-menu li .icon-link {
 	text-decoration: none;
 	display: block;
 	height: 5em;
 	width: 5.2em;
 	color: #7a7a7a;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 0.063em solid rgba(0,0,0,0.1);
 	-webkit-transition: background 0.1s ease-in-out;
 	-moz-transition: background 0.1s ease-in-out;
 	transition: background 0.1s ease-in-out;
 }
 
-.menu-icon li:first-child,
-.menu-icon li .icon-link:hover{ 
+.icon-menu li:first-child,
+.icon-menu li .icon-link:hover{ 
 	background: #ff8432;
 	color: #fff;
 }
@@ -41,7 +42,7 @@
 
 /*--Sub Icons--*/
 
-.p-menu{ 
+.menu-p{ 
 	font-size: 0.750em; 
 	margin: 0;
 	padding: 0;
@@ -82,7 +83,7 @@
 	padding: 0.5em;
 	width: 100%;
 	color: #7a7a7a;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom:  0.063em solid rgba(0,0,0,0.1);
 	-webkit-transition: background 0.1s ease-in-out;
 	-moz-transition: background 0.1s ease-in-out;
 	transition: background 0.1s ease-in-out;
@@ -98,5 +99,5 @@
 
 /*--Options--*/
 
-@media only screen and (max-width: 768px) { .menu-icon { display: none; } }
+@media only screen and (max-width: 768px) { .icon-menu { display: none; } }
   

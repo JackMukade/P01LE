@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../files/css/header.css" >
     <link rel="stylesheet" href="../files/css/home.css" >
     <link rel="stylesheet" href="../files/css/buttons.css" >
+    <link rel="stylesheet" href="../files/css/form.css" >
     <link rel="stylesheet" href="../files/css/main.css" >
     <link rel="stylesheet" href="../files/css/table.css" >
-    <link rel="stylesheet" href="../files/css/form.css" >
     <link rel="stylesheet" href="../files/css/mobile_menu.css" >
     <link rel="stylesheet" href="../files/open-source/dataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" >
     <script defer src="../files/open-source/fontawesome-5.7.1/js/all.js"></script>
@@ -26,18 +26,19 @@
                 <a id="opnavMob1" class="mobile-title" href="#"><i class="fas fa-clipboard-list mr-2"></i>Catálogos</a>
                 <a id="opnavMob2" class="mobile-title" href="#"><i class="fas fa-calculator mr-2"></i>Operaciones</a>
                 <a id="opnavMob3" class="mobile-title" href="#"> <i class="fas fa-file-pdf  mr-2"></i>Reportes</a>
+                <a id="logoutMobile" class="mobile-title" href="#"><i class="fas fa-sign-out-alt mr-2"></i>Salir</a>
             </div>
             <div id="subNavMob1" class="mobile-menu mobileMenu-options">
                 <a class="mobileMenu-title"><i class="fas fa-clipboard-list mr-2"></i>Catálogos<div id="close1" class="float-right cursor-pointer"><i class="fas fa-times"></i></div></a>
-                <a href="#">Usuarios</a>
-                <a href="#">Perfiles</a>
-                <a href="#">Clientes</a>
-                <a href="#">Estaciones</a>
+                <a href="usuarios.html">Usuarios</a>
+                <a href="entregas.html">Entregas</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="estaciones.html">Estaciones</a>
                 <a href="#">Centros de trabajo</a>
-                <a href="#">Medios de transporte</a>
-                <a href="#">Productos</a>
+                <a href="transportes">Medios de transporte</a>
+                <a href="productos">Productos</a>
                 <a href="#">Turnos</a>
-                <a href="#">Unidades de medida</a>
+                <a href="unidadesM">Unidades de medida</a>
             </div>
             <div id="subNavMob2" class="mobile-menu mobileMenu-options">
                 <a class="mobileMenu-title"><i class="fas fa-calculator mr-2"></i>Operaciones<div id="close2" class="float-right cursor-pointer"><i class="fas fa-times"></i></div></a>
@@ -62,15 +63,15 @@
                         <p class = "menu-p reset mt-1">Catálogos</p>
                     </a>
                     <div class="dropdown-content">
-                        <a class="dropdown-item" href="#"><p class="item-text">Usuarios</p></a>
-                        <a class="dropdown-item" href="#"><p class="item-text">Perfiles</p></a>
-                        <a class="dropdown-item" href="#"><p class="item-text">Clientes</p></a>
-                        <a class="dropdown-item" href="#"><p class="item-text">Estaciones</p></a>
+                        <a class="dropdown-item" href="usuarios.html"><p class="item-text">Usuarios</p></a>
+                        <a class="dropdown-item" href="entregas.html"><p class="item-text">Entregas</p></a>
+                        <a class="dropdown-item" href="clientes.html"><p class="item-text">Clientes</p></a>
+                        <a class="dropdown-item" href="estaciones.html"><p class="item-text">Estaciones</p></a>
                         <a class="dropdown-item" href="#"><p class="item-text">Centros de trabajo</p></a>
-                        <a class="dropdown-item" href="#"><p class="item-text">Medios de transporte</p></a>
-                        <a class="dropdown-item" href="#"><p class="item-text">Productos</p></a>
+                        <a class="dropdown-item" href="transportes.html"><p class="item-text">Medios de transporte</p></a>
+                        <a class="dropdown-item" href="productos.html"><p class="item-text">Productos</p></a>
                         <a class="dropdown-item" href="#"><p class="item-text">Turnos</p></a>
-                        <a class="dropdown-item mb-0" href="#"><p class="item-text">Unidades de medida</p></a>
+                        <a class="dropdown-item mb-0" href="unidadesM.html"><p class="item-text">Unidades de medida</p></a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -95,7 +96,6 @@
                         <p class = "menu-p reset mt-1">Reportes</p>
                     </a>
                 </li>
-                <!--Example for active item:<li class="cbp-vicurrent"><a href="#" class="icon-pencil">Pencil</a></li>-->
             </ul>
             <main id="main" class="col">
                 <div class="row">
@@ -113,315 +113,47 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="row">
-                   <div class="col-12 p-0 d-flex justify-content-center search-dropdown">
-                        <button id="searchHandle" class="btn-menu"><i class="fas fa-search mr-2"></i>Búsqueda</button>
-                        <button id="add"  class="btn-menu"><i class="fas fa-plus mr-2"></i>Agregar</button>
-                        <button id="edit" class="btn-menu"><i class="fas fa-edit mr-2"></i>Editar</button>
-                        <button id="del"  class="btn-menu"><i class="fas fa-times mr-2"></i>Eliminar</button>
-                        <div id="searchContainer" class="search-dropdown-content">
-                            <div class="row">   
-                                <div id="closeSearch" class="col-12 d-flex justify-content-end button-close cursor-pointer">
-                                    <i class="fas fa-times fa-1x"></i>
-                                </div>
-                                <div class="col-lg-6 form-group align-items-center mb-0">
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                            <select class="form-control select-custom" id="select_idClient">
-                                                <option value="1">Contiene</option>
-                                                <option value="2">Empieza con</option>
-                                                <option value="3">Termina con</option>
-                                                <option value="4">Igual a</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 form-group mb-0">
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                            <select class="form-control select-custom" id="select_idClient">
-                                                <option value="1">Contiene</option>
-                                                <option value="2">Empieza con</option>
-                                                <option value="3">Termina con</option>
-                                                <option value="4">Igual a</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 form-group mb-0">
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                            <select class="form-control select-custom" id="select_idClient">
-                                                <option value="1">Contiene</option>
-                                                <option value="2">Empieza con</option>
-                                                <option value="3">Termina con</option>
-                                                <option value="4">Igual a</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 form-group mb-0">
-                                    <div class="form-row">
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                            <select class="form-control select-custom" id="select_idClient">
-                                                <option value="1">Contiene</option>
-                                                <option value="2">Empieza con</option>
-                                                <option value="3">Termina con</option>
-                                                <option value="4">Igual a</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-1">
-                                    <div class="row d-flex justify-content-end">
-                                        <div class="col-12 col-md-3 d-flex justify-content-end">
-                                            <button id="" type="submit" class="btn-action btn-accept w-100"><i class="fas fa-search"></i> Buscar</button>
-                                        </div>
-                                    </div>      
-                                </div>     
-                            </div>
-                        </div>
-                        <div id="formContainer" class="search-dropdown-content">
-                            <div class="row">   
-                                <div id="closeForm" class="col-12 d-flex justify-content-end button-close cursor-pointer">
-                                    <i class="fas fa-times fa-1x"></i>
-                                </div>
-                                <div class="col-lg-4 form-group align-items-center mb-0">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 form-group mb-0">
-                                    <div class="form-row">
-                                        <div class="col">
-                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                            <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="row d-flex justify-content-end">
-                                        <div class="col">
-                                            <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                            <button id="" type="submit" class="btn-action btn-accept w-100"><i class="fas fa-search"></i> Buscar</button>
-                                        </div>
-                                    </div>      
-                                </div>     
-                            </div>
-                        </div>
-                   </div>
-                </div>-->
                 <div class="row d-flex justify-content-center row-body form-dropdown">
                     <div class="col-11">
                         <div class="row">
-                            <div class="col-2 col-md-4">
-                                <button id="searchHandle" class="btn-title btn-alone"><i class="fas fa-search mr-md-2"></i><span class="d-none d-md-block">Búsqueda</span></button>
+                            <div class="col-7 d-flex justify-content-end align-items-center">
+                                <h5 class="title">Unidades de medida</h5>
                             </div>
-                            <div class="col-5 col-md-4 d-flex justify-content-center align-items-center">
-                                <h5 class="title">Lorem Ipsum</h5>
+                            <div class="col-5 d-flex">
+                                <button id="add"  class="btn-menu btn-responsive "><i class="fas fa-plus mr-md-2"></i><span class="d-none d-md-block">Agregar</span></button>
+                                <button id="edit" class="btn-menu btn-responsive "><i class="fas fa-edit mr-md-2"></i><span class="d-none d-md-block">Editar</span></button>
+                                <button id="del"  class="btn-menu btn-responsive "><i class="fas fa-times mr-md-2"></i><span class="d-none d-md-block">Eliminar</span></button>
                             </div>
-                            <div class="col-5 col-md-4 d-flex justify-content-end ">
-                                <button id="add"  class="btn-title btn-responsive "><i class="fas fa-plus mr-md-2"></i><span class="d-none d-md-block">Agregar</span></button>
-                                <button id="edit" class="btn-title btn-responsive "><i class="fas fa-edit mr-md-2"></i><span class="d-none d-md-block">Editar</span></button>
-                                <button id="del"  class="btn-title btn-responsive "><i class="fas fa-times mr-md-2"></i><span class="d-none d-md-block">Eliminar</span></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="searchContainer" class="form-dropdown-content">
-                        <div class="row">   
-                            <div class="col-12">
-                                 <i class="fas fa-search mr-md-2"></i>Búsqueda
-                            </div>
-                            <!--<div class="col-9 d-flex justify-content-end cursor-pointer">
-                                <i class="fas fa-times fa-1x"></i>
-                                <button id="edit" class="btn-title btn-responsive btn-search btn-close"><i class="fas fa-times mr-md-2"></i><span>Cerrar</span></button>
-                                <button id="del"  class="btn-title btn-responsive btn-search"><i class="fas fa-search mr-md-2"></i><span>Búsqueda</span></button>
-                            </div>-->
-                            <div class="col-lg-6 form-group align-items-center mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 form-group mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 form-group mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 form-group mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-end mt-1">
-                                <button id="closeSearch" class="btn-title btn-responsive btn-search btn-close"><i class="fas fa-times mr-md-2"></i><span>Cerrar</span></button>
-                                <button id="accept"  class="btn-title btn-responsive btn-search ml-1"><i class="fas fa-search mr-md-2"></i><span>Búsqueda</span></button>   
-                            </div>     
                         </div>
                     </div>
                     <div id="formContainer" class="form-dropdown-content">
                         <div class="row">   
-                            <div class="col-12">
-                                 <i class="fas fa-search mr-md-2"></i>Búsqueda
+                            <div class="col-11">
+                                <span id="labelAdd" class="span-form"><i class="fas fa-plus mr-2"></i>Agregar</span>
+                                <span id="labelEdit" class="d-none span-form"><i class="fas fa-edit mr-2"></i>Actualizar</span>
+                                <span class="span-form">unidades de medida</span>
                             </div>
-                            <!--<div class="col-9 d-flex justify-content-end cursor-pointer">
-                                <i class="fas fa-times fa-1x"></i>
-                                <button id="edit" class="btn-title btn-responsive btn-search btn-close"><i class="fas fa-times mr-md-2"></i><span>Cerrar</span></button>
-                                <button id="del"  class="btn-title btn-responsive btn-search"><i class="fas fa-search mr-md-2"></i><span>Búsqueda</span></button>
-                            </div>-->
-                            <div class="col-lg-6 form-group align-items-center mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
+                            <div class="col-1">
+                                <span id="closeForm" class="close-form"><i class="fas fa-times"></i></span>
                             </div>
-                            <div class="col-lg-6 form-group mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <label class="col-form-label pb-0 label-size" for="select_idClient">Id unidad de medida</label>
+                                <input id="id" type="text" class="form-control form-control-sm" maxlength="10" autocomplete="off">
                             </div>
-                            <div class="col-lg-6 form-group mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
+                            <div class="col-12 col-md-4 form-group">
+                                <label class="col-form-label pb-0 label-size" for="select_idClient">Nombre unidad de medida</label>
+                                <input id="id" type="text" class="form-control form-control-sm" maxlength="35" autocomplete="off">
                             </div>
-                            <div class="col-lg-6 form-group mb-0">
-                                <div class="form-row">
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size" for="select_idClient">Lorem Ipsum</label>
-                                        <select class="form-control select-custom" id="select_idClient">
-                                            <option value="1">Contiene</option>
-                                            <option value="2">Empieza con</option>
-                                            <option value="3">Termina con</option>
-                                            <option value="4">Igual a</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="col-form-label pb-0 label-size label-invisible">-</label>
-                                        <input id="input_idClient" type="text" class="form-control mt-1 mt-md-0 form-control-sm" aria-describedby="textHelp" maxlength="15">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex justify-content-end mt-1">
-                                <button id="closeSearch" class="btn-title btn-responsive btn-search btn-close"><i class="fas fa-times mr-md-2"></i><span>Cerrar</span></button>
-                                <button id="accept"  class="btn-title btn-responsive btn-search ml-1"><i class="fas fa-search mr-md-2"></i><span>Búsqueda</span></button>   
+                            <div class="col-12 col-md-4">
+                                <label class="col-form-label pb-0 label-size label-invisible">-</label>
+                                <button id="del" class="btn-menu w-100 btn-action"><i class="fas fa-check mr-md-2"></i><span>Aceptar</span></button>   
                             </div>     
                         </div>
                     </div>
                     <div class="col-11">                        
                         <table id="table" class="table-all table responsive mt-2" style="width:100%;">
                             <thead class="table-head">
-                                <tr>
+                                <tr data="x++xy">
                                     <th>Id cliente</th>
                                     <th>Nombre</th>
                                     <th>Cantidad</th>
@@ -430,560 +162,560 @@
                                 </tr>
                             </thead>
                             <tbody class="table-body">
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">February</td>
                                     <td class="text-left">$ 10,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">March</td>
                                     <td class="text-left">$ 85,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">April</td>
                                     <td class="text-left">$ 56,000.00</td>
                                     <td class="text-left">January</td>
                                     <td class="text-left">$ 50,000.00</td>
                                     <td class="text-left">$ 50,000.00</td>
                                 </tr>
-                                <tr>
+                                <tr data="x++xy">
                                     <td class="text-left">May</td>
                                     <td class="text-left">$ 98,000.00</td>
                                     <td class="text-left">January</td>
@@ -1014,6 +746,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script> 
     <script type="text/javascript" src="../files/js/menus.js"></script>
+    <script type="text/javascript" src="../files/js/search.js"></script>
     <script type="text/javascript" src="../files/js/table.js"></script>
     <script type="text/javascript" src="../files/js/form.js"></script>
 </body>

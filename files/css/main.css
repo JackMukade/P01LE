@@ -1,8 +1,11 @@
 .wrapper{
-    background:#fbfbfb;
+    /*background:#fbfbfb;*/
     height: 100vh;
     overflow: hidden;
 }
 
+@media only screen and (max-width: 48em) { .wrapper{ overflow: auto; }}
+
+
 /*100vh - Header + Menu*/
-.row-body{ height: calc(100vh - 8.688em);}
+.row-body{ max-height: calc(100vh - 5em);}
